@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J NET | Internet Popular de Qualidade</title>
+    <!-- Ícones do FontAwesome -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b192c;
+            color: #ffffff;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #0f2b48, #0a192f);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #0056b3;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: #00bcd4;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: #a0aec0;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+
+        /* Seção Principal / Banner */
+        .hero {
+            padding: 40px 20px;
+            text-align: center;
+            background: radial-gradient(circle, #113054 0%, #0b192c 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .hero p {
+            color: #00bcd4;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        /* Container de Planos */
+        .plans-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .plan-card {
+            background: linear-gradient(145deg, #132a4a, #0d1f38);
+            border: 2px solid #1e3d6b;
+            border-radius: 15px;
+            padding: 30px 20px;
+            width: 300px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            border-color: #00bcd4;
+        }
+
+        .plan-card.popular {
+            border-color: #ffd700;
+        }
+
+        .badge {
+            background-color: #ffd700;
+            color: #000;
+            font-weight: bold;
+            font-size: 0.8rem;
+            padding: 5px 15px;
+            border-radius: 20px;
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-transform: uppercase;
+        }
+
+        .plan-title {
+            font-size: 2rem;
+            color: #ffd700;
+            font-weight: 800;
+        }
+
+        .plan-tech {
+            font-size: 0.9rem;
+            color: #00bcd4;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .wifi-tag {
+            background-color: rgba(0, 188, 212, 0.2);
+            color: #00bcd4;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #a0aec0;
+        }
+
+        .installation-info {
+            font-size: 0.75rem;
+            color: #a0aec0;
+            margin-bottom: 20px;
+        }
+
+        .features-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 25px;
+            border-top: 1px solid #1e3d6b;
+            padding-top: 15px;
+        }
+
+        .features-list li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+        }
+
+        .features-list i {
+            color: #2ed573;
+            margin-right: 8px;
+        }
+
+        /* Seção TV Adicional */
+        .tv-section {
+            background: linear-gradient(90deg, #102a45, #153965);
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #00bcd4;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .tv-text h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .tv-text p {
+            color: #a0aec0;
+            font-size: 0.95rem;
+        }
+
+        .tv-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffd700;
+            text-align: center;
+        }
+
+        /* Botão de Ação Geral */
+        .btn-cta {
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .btn-cta:hover {
+            transform: scale(1.05);
+            background-color: #1ebd58;
+        }
+
+        .center-cta {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #06101e;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #718096;
+            border-top: 1px solid #132a4a;
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            .tv-section {
+                text-align: center;
+                flex-direction: column;
+                margin: 20px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">J <span>NET</span></div>
+        <div class="tagline">Internet Popular de Qualidade</div>
+    </header>
+
+    <!-- Seção Principal -->
+    <section class="hero">
+        <h1>Velocidade e Qualidade Para Você!</h1>
+        <p>Conexão 100% Fibra Óptica ultraestável</p>
+
+        <!-- Container dos Cards de Planos -->
+        <div class="plans-container">
+
+            <!-- Plano 90 Megas -->
+            <div class="plan-card popular">
+                <div class="badge">Mais Vendido</div>
+                <div class="plan-title">90 MEGA</div>
+                <div class="plan-tech">Fibra Óptica</div>
+                <div class="wifi-tag"><i class="fa-solid fa-wifi"></i> WIFI GRÁTIS</div>
+                <div class="price">R$ 69,90<span>/mês</span></div>
+                <div class="installation-info">Taxa de instalação sob consulta</div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check"></i> Redes Sociais</li>
+                    <li><i class="fa-solid fa-check"></i> Vídeos e Streaming HD</li>
+                    <li><i class="fa-solid fa-check"></i> Download Estável</li>
+                </ul>
+            </div>
+
+            <!-- Plano 250 Megas -->
+            <div class="plan-card">
+                <div class="plan-title">250 MEGA</div>
+                <div class="plan-tech">Fibra Óptica</div>
+                <div class="wifi-tag"><i class="fa-solid fa-wifi"></i> WIFI GRÁTIS</div>
+                <div class="price">R$ 79,90<span>/mês</span></div>
+                <div class="installation-info">Taxa de instalação sob consulta</div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check"></i> Redes Sociais Rápidas</li>
+                    <li><i class="fa-solid fa-check"></i> Jogos Online</li>
+                    <li><i class="fa-solid fa-check"></i> Streaming em 4K</li>
+                </ul>
+            </div>
+
+            <!-- Plano 350 Megas -->
+            <div class="plan-card">
+                <div class="plan-title">350 MEGA</div>
+                <div class="plan-tech">Fibra Óptica</div>
+                <div class="wifi-tag"><i class="fa-solid fa-wifi"></i> WIFI GRÁTIS</div>
+                <div class="price">R$ 89,90<span>/mês</span></div>
+                <div class="installation-info">Taxa de instalação sob consulta</div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check"></i> Home Office sem travamentos</li>
+                    <li><i class="fa-solid fa-check"></i> Vários dispositivos conectados</li>
+                    <li><i class="fa-solid fa-check"></i> Desempenho Máximo Premium</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Seção Adicional do Plano de TV -->
+        <div class="tv-section">
+            <div class="tv-text">
+                <h3><i class="fa-solid fa-tv"></i> Adicione Plano de TV</h3>
+                <p>Acesso a canais de TV ao vivo, Filmes e Séries diretamente na sua Smart TV.</p>
+            </div>
+            <div class="tv-price">
+                + R$ 30,00 <span>/ por tela</span>
+            </div>
+        </div>
+
+        <!-- Botão Unificado para Atendimento -->
+        <div class="center-cta">
+            <a href="https://wa.me" target="_blank" class="btn-cta">
+                <i class="fa-brands fa-whatsapp"></i> FALE COM NOSSO ATENDENTE
