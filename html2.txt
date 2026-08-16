@@ -1,0 +1,19 @@
+<!-- Seção FAQ -->
+<section style="max-width: 950px; margin: 40px auto; padding: 20px; background-color: #0d1f38; border-radius: 15px; border: 1px solid #1e3d6b;">
+    <h3 style="text-align: center; color: #ffd700; margin-bottom: 25px; font-size: 1.6rem;"><i class="fa-solid fa-circle-question"></i> Dúvidas Frequentes</h3>
+    
+    <div style="margin-bottom: 15px; border-bottom: 1px solid #1e3d6b; padding-bottom: 10px;">
+        <h4 style="color: #00bcd4; margin-bottom: 5px;">Como funciona a taxa de instalação?</h4>
+        <p style="color: #a0aec0; font-size: 0.95rem;">A taxa de instalação varia de acordo com o plano escolhido e a viabilidade técnica da sua rua. Fale com o atendente para consultar os valores para o seu endereço.</p>
+    </div>
+
+    <div style="margin-bottom: 15px; border-bottom: 1px solid #1e3d6b; padding-bottom: 10px;">
+        <h4 style="color: #00bcd4; margin-bottom: 5px;">O roteador Wi-Fi está incluso no valor?</h4>
+        <p style="color: #a0aec0; font-size: 0.95rem;">Sim! Todos os nossos planos de Fibra Óptica acompanham o roteador Wi-Fi de última geração em regime de comodato (gratuito enquanto durar a assinatura).</p>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <h4 style="color: #00bcd4; margin-bottom: 5px;">Como funciona o adicional de TV?</h4>
+        <p style="color: #a0aec0; font-size: 0.95rem;">Por apenas R$ 30,00 mensais por tela, você ganha acesso a canais ao vivo, filmes e séries direto no aplicativo instalado na sua Smart TV, celular ou computador.</p>
+    </div>
+</section>
