@@ -17,7 +17,6 @@
         body {
             background-color: #0b192c;
             color: #ffffff;
-            line-height: 1.6;
         }
 
         /* Cabeçalho */
@@ -173,56 +172,12 @@
             margin-right: 8px;
         }
 
-        /* Seção Catálogo de Filmes e Séries */
-        .entertainment-section {
-            background: linear-gradient(145deg, #182030, #0f1624);
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid #ffd700;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-        }
-
-        .entertainment-title {
-            color: #ffd700;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
-        }
-
-        .entertainment-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .entertainment-item h4 {
-            color: #00bcd4;
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-        }
-
-        .entertainment-item ul {
-            list-style: none;
-            color: #a0aec0;
-            font-size: 0.9rem;
-        }
-
-        .entertainment-item ul li {
-            margin-bottom: 5px;
-        }
-
         /* Seção TV Adicional */
         .tv-section {
             background: linear-gradient(90deg, #102a45, #153965);
             max-width: 950px;
-            margin: 20px auto 40px auto;
-            padding: 25px;
+            margin: 40px auto;
+            padding: 30px;
             border-radius: 15px;
             border: 1px solid #00bcd4;
             display: flex;
@@ -230,14 +185,11 @@
             justify-content: space-around;
             flex-wrap: wrap;
             gap: 20px;
-        }
-
-        .tv-text {
-            text-align: left;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
 
         .tv-text h3 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: #fff;
             margin-bottom: 5px;
         }
@@ -251,110 +203,7 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: #ffd700;
-        }
-
-        .tv-price span {
-            font-size: 1rem;
-            color: #a0aec0;
-        }
-
-        /* Formulário de Cobertura */
-        .coverage-section {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 30px;
-            background: linear-gradient(145deg, #132a4a, #0d1f38);
-            border-radius: 15px;
-            border: 2px solid #1e3d6b;
             text-align: center;
-        }
-
-        .coverage-section h3 {
-            color: #fff;
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-        }
-
-        .coverage-section p {
-            color: #a0aec0;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-
-        .coverage-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            text-align: left;
-        }
-
-        .coverage-form label {
-            font-size: 0.85rem;
-            color: #00bcd4;
-            font-weight: bold;
-        }
-
-        .coverage-form input, .coverage-form select {
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #1e3d6b;
-            background-color: #0b192c;
-            color: #fff;
-            outline: none;
-            width: 100%;
-        }
-
-        .coverage-form button {
-            background-color: #00bcd4;
-            color: #000;
-            font-weight: bold;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-top: 10px;
-            font-size: 1rem;
-            text-transform: uppercase;
-            transition: background-color 0.2s;
-        }
-
-        .coverage-form button:hover {
-            background-color: #008ba3;
-        }
-
-        /* Seção FAQ */
-        .faq-section {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: #0d1f38;
-            border-radius: 15px;
-            border: 1px solid #1e3d6b;
-            text-align: left;
-        }
-
-        .faq-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #1e3d6b;
-            padding-bottom: 15px;
-        }
-
-        .faq-item:last-child {
-            margin-bottom: 0;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .faq-item h4 {
-            color: #00bcd4;
-            margin-bottom: 5px;
-            font-size: 1.1rem;
-        }
-
-        .faq-item p {
-            color: #a0aec0;
-            font-size: 0.95rem;
-            line-height: 1.5;
         }
 
         /* Botão de Ação Geral */
@@ -394,3 +243,136 @@
         }
 
         /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            .tv-section {
+                text-align: center;
+                flex-direction: column;
+                margin: 20px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">J <span>NET</span></div>
+        <div class="tagline">Internet Popular de Qualidade</div>
+    </header>
+
+    <!-- Seção Principal -->
+    <section class="hero">
+        <h1>Velocidade e Qualidade Para Você!</h1>
+        <p>Conexão 100% Fibra Óptica ultraestável</p>
+
+        <!-- Container dos Cards de Planos -->
+        <div class="plans-container">
+
+            <!-- Plano 90 Megas -->
+            <div class="plan-card popular">
+                <div class="badge">Mais Vendido</div>
+                <div class="plan-title">90 MEGA</div>
+                <div class="plan-tech">Fibra Óptica</div>
+                <div class="wifi-tag"><i class="fa-solid fa-wifi"></i> WIFI GRÁTIS</div>
+                <div class="price">R$ 69,90<span>/mês</span></div>
+                <div class="installation-info">Taxa de instalação sob consulta</div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check"></i> Redes Sociais</li>
+                    <li><i class="fa-solid fa-check"></i> Vídeos e Streaming HD</li>
+                    <li><i class="fa-solid fa-check"></i> Download Estável</li>
+                </ul>
+            </div>
+
+            <!-- Plano 250 Megas -->
+            <div class="plan-card">
+                <div class="plan-title">250 MEGA</div>
+                <div class="plan-tech">Fibra Óptica</div>
+                <div class="wifi-tag"><i class="fa-solid fa-wifi"></i> WIFI GRÁTIS</div>
+                <div class="price">R$ 79,90<span>/mês</span></div>
+                <div class="installation-info">Taxa de instalação sob consulta</div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check"></i> Redes Sociais Rápidas</li>
+                    <li><i class="fa-solid fa-check"></i> Jogos Online</li>
+                    <li><i class="fa-solid fa-check"></i> Streaming em 4K</li>
+                </ul>
+            </div>
+
+            <!-- Plano 350 Megas -->
+            <div class="plan-card">
+                <div class="plan-title">350 MEGA</div>
+                <div class="plan-tech">Fibra Óptica</div>
+                <div class="wifi-tag"><i class="fa-solid fa-wifi"></i> WIFI GRÁTIS</div>
+                <div class="price">R$ 89,90<span>/mês</span></div>
+                <div class="installation-info">Taxa de instalação sob consulta</div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check"></i> Home Office sem travamentos</li>
+                    <li><i class="fa-solid fa-check"></i> Vários dispositivos conectados</li>
+                    <li><i class="fa-solid fa-check"></i> Desempenho Máximo Premium</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Seção Adicional do Plano de TV -->
+        <div class="tv-section">
+            <div class="tv-text">
+                <h3><i class="fa-solid fa-tv"></i> Adicione Plano de TV</h3>
+                <p>Acesso a canais de TV ao vivo, Filmes e Séries diretamente na sua Smart TV.</p>
+            </div>
+            <div class="tv-price">
+                + R$ 30,00 <span>/ por tela</span>
+            </div>
+        </div>
+
+        <!-- Botão Unificado para Atendimento -->
+        <div class="center-cta">
+            <a href="https://wa.me" target="_blank" class="btn-cta">
+                <i class="fa-brands fa-whatsapp"></i> FALE COM NOSSO ATENDENTE
+
+<!-- Seção FAQ -->
+<section style="max-width: 950px; margin: 40px auto; padding: 20px; background-color: #0d1f38; border-radius: 15px; border: 1px solid #1e3d6b;">
+    <h3 style="text-align: center; color: #ffd700; margin-bottom: 25px; font-size: 1.6rem;"><i class="fa-solid fa-circle-question"></i> Dúvidas Frequentes</h3>
+    
+    <div style="margin-bottom: 15px; border-bottom: 1px solid #1e3d6b; padding-bottom: 10px;">
+        <h4 style="color: #00bcd4; margin-bottom: 5px;">Como funciona a taxa de instalação?</h4>
+        <p style="color: #a0aec0; font-size: 0.95rem;">A taxa de instalação varia de acordo com o plano escolhido e a viabilidade técnica da sua rua. Fale com o atendente para consultar os valores para o seu endereço.</p>
+    </div>
+
+    <div style="margin-bottom: 15px; border-bottom: 1px solid #1e3d6b; padding-bottom: 10px;">
+        <h4 style="color: #00bcd4; margin-bottom: 5px;">O roteador Wi-Fi está incluso no valor?</h4>
+        <p style="color: #a0aec0; font-size: 0.95rem;">Sim! Todos os nossos planos de Fibra Óptica acompanham o roteador Wi-Fi de última geração em regime de comodato (gratuito enquanto durar a assinatura).</p>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <h4 style="color: #00bcd4; margin-bottom: 5px;">Como funciona o adicional de TV?</h4>
+        <p style="color: #a0aec0; font-size: 0.95rem;">Por apenas R$ 30,00 mensais por tela, você ganha acesso a canais ao vivo, filmes e séries direto no aplicativo instalado na sua Smart TV, celular ou computador.</p>
+    </div>
+</section>
+
+
+<!-- Formulário de Cobertura -->
+<section style="max-width: 600px; margin: 40px auto; padding: 30px; background: linear-gradient(145deg, #132a4a, #0d1f38); border-radius: 15px; border: 2px solid #1e3d6b; text-align: center;">
+    <h3 style="color: #fff; margin-bottom: 10px;"><i class="fa-solid fa-map-location-dot"></i> Consulte Disponibilidade</h3>
+    <p style="color: #a0aec0; font-size: 0.9rem; margin-bottom: 20px;">Preencha os dados abaixo para verificarmos se a Fibra Óptica já passa na sua rua!</p>
+    
+    <form style="display: flex; flex-direction: column; gap: 15px; text-align: left;">
+        <label style="font-size: 0.85rem; color: #00bcd4; font-weight: bold;">Seu Nome:</label>
+        <input type="text" placeholder="Ex: João Silva" style="padding: 12px; border-radius: 8px; border: 1px solid #1e3d6b; background-color: #0b192c; color: #fff; outline: none;">
+        
+        <label style="font-size: 0.85rem; color: #00bcd4; font-weight: bold;">Endereço Completo:</label>
+        <input type="text" placeholder="Rua, Número e Bairro" style="padding: 12px; border-radius: 8px; border: 1px solid #1e3d6b; background-color: #0b192c; color: #fff; outline: none;">
+        
+        <label style="font-size: 0.85rem; color: #00bcd4; font-weight: bold;">Plano de Interesse:</label>
+        <select style="padding: 12px; border-radius: 8px; border: 1px solid #1e3d6b; background-color: #0b192c; color: #fff; outline: none;">
+            <option>90 MEGA - R$ 69,90</option>
+            <option>250 MEGA - R$ 79,90</option>
+            <option>350 MEGA - R$ 89,90</option>
+        </select>
+
+        <button type="button" onclick="alert('Dados recebidos! Clique no botão do WhatsApp abaixo para concluir seu envio com o atendente.')" style="background-color: #00bcd4; color: #000; font-weight: bold; padding: 15px; border: none; border-radius: 8px; cursor: pointer; margin-top: 10px; font-size: 1rem; text-transform: uppercase;">Verificar Disponibilidade</button>
+    </form>
+</section>
+
